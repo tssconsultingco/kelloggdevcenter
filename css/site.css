@@ -1,0 +1,81 @@
+header {
+    box-shadow: 0 0 10px purple;
+}
+
+main {
+    height: 100vh;
+}
+
+.carousel-item:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    background: rgba(0,0,0,0.5);
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-item img {
+    min-height: 300px;
+    height: 100vh;
+    width: 100%;
+}
+
+.carousel-caption {
+    bottom: 40%;
+    text-shadow: 0 0 20px black;
+}
+.carousel-caption h2 {
+    font-size: 4rem;
+    line-height: 1;
+}
+
+footer {
+    box-shadow: 0 0 10px purple;
+    padding: 3rem 0;
+    position: relative;
+}
+
+footer .row:first-of-type {
+    margin-bottom: 2rem;
+}
+
+footer a,
+footer h6 {
+    color: #fff;
+    font-family: Arial;
+}
+footer a {
+    font-size: 14px;
+}
+footer a:hover {
+    color: gray;
+}
+footer h6 {
+    font-weight: bold;
+}
+footer ul {
+    border-top: dotted 2px;
+    margin-left: 0;
+    padding-left: 0;
+    padding-top: 0.5rem;
+}
+footer li {
+    list-style: none;
+    margin-left: 0;
+}
+footer li.d-md-inline {
+    padding-right: 1rem;
+}
+
+footer p {
+    color: #fff;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+}
+footer p:first-child {
+    border-top: 2px dotted #212529;
+    margin-top: 2rem; 
+    padding-top: 1rem;
+}
