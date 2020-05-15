@@ -1,10 +1,36 @@
+.bg-gray {
+    background: #ccc;
+}
+.bg-offwhite {
+    background: #dfdfdf;
+}
+
+
+article {
+    position: relative;
+}
+
 header {
-    box-shadow: 0 0 10px purple;
+    /* box-shadow: 0 0 10px purple; */
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+@media screen and (max-width: 991px) {
+    header.bg-transparent {
+        background-color: #212529 !important;
+        position: relative;
+    }
 }
 
 main {
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
 }
+
+/* Home page */
 
 .carousel-item:before {
     content: '';
@@ -30,8 +56,29 @@ main {
     line-height: 1;
 }
 
+
+/* Explore Dev */
+.headline {
+    color: #fff;
+    height: 360px;
+    position: relative;
+}
+.headline .container {
+    position: relative;
+    z-index: 1;
+}
+.headline .align-items-center {
+    height: 100%;
+}
+
+
+/* Explore Business User */
+
+
+
+
 footer {
-    box-shadow: 0 0 10px purple;
+    box-shadow: 0 0 10px #007bff;
     padding: 3rem 0;
     position: relative;
 }
