@@ -32,6 +32,13 @@ main {
 
 /* Home page */
 
+.carousel {
+    height: 75vh;
+}
+.carousel-inner {
+    height: 100%;
+}
+
 .carousel-item:before {
     content: '';
     position: absolute;
@@ -43,17 +50,49 @@ main {
 
 .carousel-item img {
     min-height: 300px;
-    height: 100vh;
+    height: 75vh;
     width: 100%;
 }
 
 .carousel-caption {
-    bottom: 40%;
+    /* bottom: 40%; */
+    height: 100%;
     text-shadow: 0 0 20px black;
 }
 .carousel-caption h2 {
     font-size: 4rem;
     line-height: 1;
+}
+.carousel-caption p {
+    font-size: 1.2rem;
+    padding: 1rem 3rem;
+}
+
+.welcome {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    position: relative;
+}
+.welcome:first-of-type:after {
+    content:'';
+    background-color: #007bff;
+    height: 16rem;
+    width: 1rem;
+    transform: skew(15deg);
+    position: absolute;
+    bottom: -8rem;
+    left: calc(50% - 0.5rem);
+}
+.welcome img {
+    width: 180%;
+    transform: skewX(15deg);
+}
+.welcome .d-md-flex {
+    padding-right: 10%;
+}
+
+.signup {
+    padding: 3rem 0;
 }
 
 
@@ -74,7 +113,13 @@ main {
 
 /* Explore Business User */
 
-
+/* Tools in Action */
+.case-study-block { 
+    border: 2px solid #ccc;
+}
+.case-study-block > div {
+    padding: 2rem;
+}
 
 
 footer {
