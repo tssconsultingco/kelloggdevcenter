@@ -8,21 +8,33 @@
 
         <style type="text/css">
             .headline { 
-                background: url("images/explore-tools-headline.jpg") center 20% no-repeat; 
+                background: url("images/api-headline.jpg") right 50% no-repeat; 
                 background-size: cover; }
             .headline:after {
-                background: rgba(0,0,0,0.6);
+                background: rgba(0,0,0,0.8);
                 content: '';
                 position: absolute;
                 height: 100%;
                 width: 100%;
             }
-            .content > .container > .row > .col-md-4 {
-                margin-top: -3rem;
+
+            .content > .container-fluid { margin: 2rem 0; }
+            .content > .container-fluid > .row > * { padding: 1rem 2rem; }
+            .content h2:first-of-type { font-size: 3rem; margin-bottom: 2rem; margin-top: -0.5rem; }
+
+            .content .col-md-8 {
+                border-left: 2px solid #ccc;
             }
 
+            .content hr { clear: both; }
+
+            .api-block {
+                padding: 1rem; }
+                .api-block > div {
+                    padding: 1rem;
+                }
+
             .bg-offwhite {
-                margin-top: 4rem;
                 padding-top: 3rem;
                 padding-bottom: 3rem;
             }
@@ -73,82 +85,113 @@
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col-12 col-md-8">        
-                                <h1>Tools in Action</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                                <h1>Development Environment/Sandbox</h1>
+                                <p>Try out your integration here.</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 <section class="content">
-                    <div class="container">
+                    <div class="container-fluid">
                         <div class="row">
                             <div class="col-12 col-md-4">
-                                <div class="case-study-block">
-                                    <img src="images/case-study-1.jpg" alt="" width="100%">
-                                    <div>
-                                        <h3>Case Study 1</h3>
-                                        <p>This is an example of API 1 integration by Client A.</p>
 
-                                        <p><a href="case-study.html">Read Case Study A &gt;&gt;</a></p>
+                                <small>RELATED LINKS</small>
+
+                                <br>
+                                <br>
+
+                                <h4>Knowledge Center</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <a href="knowledge-center.html" class="btn btn-primary">View Knowledge Center</a>
+                            
+                                <br>
+                                <br>
+                                <hr>
+                                <br>
+
+                                <h4>Code Suggestions</h4>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                                    <li>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+                                    <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                                    <li>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+                                    <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <h2>Function with objects</h2>
+
+                                <div class="row">
+                                    <div class="col-9">
+                                        <p><strong>POST</strong> /v1/test/api-1</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    
+                                        <input class="w-100" type="text" placeholder="Add access token here..." style="border-radius: 4px; font-size: 12px; padding: 0.5rem;">
+                                    </div>
+                                    <div class="col-3 text-right">
+                                        <a class="btn btn-secondary" href="#">Run request</a>
+                                    </div>
+                                </div>
+
+                                <br><br>
+                                <div class="bg-dark" style="border-radius: 2rem; color: #fff; padding: 2rem;">
+                                    <p><strong>Request</strong></p>
+                                    <hr>
+                                    <code style="color: #ccc;">
+                                        curl https://connect.kelloggsandbox.com/v2/test/api-1 \<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;-X POST \<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;-H 'Kellogg-Version: 2020-05-15' \<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;-H 'Authorization: Bearer ACCESS_TOKEN' \<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;-H 'Content-Type: application/json' \<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;-d '{}'
+                                    </code>
+                                </div>
+                                <br>
+                                <div class="bg-light" style="border-radius: 2rem; padding: 2rem;">
+                                    <p><strong>Response</strong></p>
+                                    <hr>
+                                    <code>// No response yet</code>
+                                </div>
+
+                                <br><br>
+                                <hr>
+                                <br><br>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h4>Options/Settings</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <h4>Testing Metrics</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+                                </div>
+                                <br><br>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h4>Error Codes & Error Code Library</h4>
+                                        <ul>
+                                            <li>404: lorem ipsum</li>
+                                            <li>302: lorem ipsum</li>
+                                            <li>200: lorem ipsum</li>
+                                            <li>Link to error code library</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6">
+                                        <h4>Templates</h4>
+                                        <ul>
+                                            <li>Code Template</li>
+                                            <li>Setting Template</li>
+                                            <li>Functional template</li>
+                                            <li>Misc template</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-4">
-                                <div class="case-study-block">
-                                    <img src="images/case-study-2.jpg" alt="" width="100%">
-                                    <div>
-                                        <h3>Case Study 2</h3>
-                                        <p>This is an example of API 2 integration by Client B.</p>
-
-                                        <p>Read Case Study B &gt;&gt;</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-4">
-                                <div class="case-study-block">
-                                    <img src="images/case-study-3.jpg" alt="" width="100%">
-                                    <div>
-                                        <h3>Case Study 3</h3>
-                                        <p>This is an example of API 3 integration by Client C.</p>
-
-                                        <p>Read Case Study C &gt;&gt;</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container-fluid">
-                        <div class="row bg-offwhite">
-                            <div class="d-none d-md-block col-md-1"></div>
-                            <div class="col-12 col-md-4">
-                                <h3>Search API by name</h3>
-                                <input class="form-control" id="myInput" type="text" placeholder="Search..">
-                            </div>
-                            <div class="d-none d-md-block col-md-2"></div>
-                            <div class="col-12 col-md-4">
-                                <h3>Filter by category</h3>
-
-                                <label>
-                                    <input type="checkbox"> <small>COMMERCIAL</small>
-                                </label>&nbsp;&nbsp;
-                                <label>
-                                    <input type="checkbox"> <small>DATA</small>
-                                </label>&nbsp;&nbsp;
-                                <label>
-                                    <input type="checkbox"> <small>SECURITY</small>
-                                </label>&nbsp;&nbsp;
-                                <label>
-                                    <input type="checkbox"> <small>RETAIL</small>
-                                </label>&nbsp;&nbsp;
-                                <label>
-                                    <input type="checkbox"> <small>INTERNATIONAL</small>
-                                </label>&nbsp;&nbsp;
-                                <label>
-                                    <input type="checkbox"> <small>TRAVEL</small>
-                                </label>
-                            </div>
-                            <div class="d-none d-md-block col-md-1"></div>
                         </div>
                     </div>
                 </section>
